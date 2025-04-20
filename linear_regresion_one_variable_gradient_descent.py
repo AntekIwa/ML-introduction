@@ -10,7 +10,7 @@ points_x = [random.uniform(0, 10) for _ in range(n)]
 points_y = [true_a * x + true_b + random.uniform(-5, 5) for x in points_x]
 
 def show_pts():
-    plt.scatter(punkty_x, punkty_y)
+    plt.scatter(points_x, points_y)
     plt.title(f"Random {n} points")
     plt.xlabel("X")
     plt.ylabel("Y")
@@ -47,7 +47,7 @@ def detrB(w, b):
         suma += (w * x + b - y)
     return suma / n
 
-def linear_regresion():
+def linear_regresion_gradient_descent():
     plt.ion()  
     fig = plt.figure()  
     w = 0
@@ -64,4 +64,4 @@ def linear_regresion():
     plt.ioff()  
     show_f(w, b)  
 
-linear_regresion()
+linear_regresion_gradient_descent()
